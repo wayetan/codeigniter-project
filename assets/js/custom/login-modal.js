@@ -17,19 +17,18 @@ $(function() {
                     url: "user/login",
                     type: "post",
                     data: {
-                        ajax: 1,
                         username: lg_username,
                         password: lg_password
                     },
                     cache: false,
                     success: function(json) {
                         var error_message = json.error;
-                        var success = json.logged_in;
+                        var success = json.success;
                         if (typeof error_message !== "undefined") {
                             msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", error_message);
                         } else if (typeof success !== "undefined" && success == "1") {
                             msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
-                            $("#login-form").hide();
+                            $("#login-modal").modal("hide");
                         }
                     }
                 });
@@ -45,14 +44,29 @@ $(function() {
                 return false;
                 break;
             case "register-form":
-                var $rg_username = $('#register_username').val();
-                var $rg_email = $('#register_email').val();
-                var $rg_password = $('#register_password').val();
-                if ($rg_username == "ERROR") {
-                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
-                } else {
-                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Register OK");
-                }
+                var rg_username = $('#register_username').val();
+                var rg_email = $('#register_email').val();
+                var rg_password = $('#register_password').val();
+                $.ajax({
+                    url: "user/register",
+                    type: "post",
+                    data: {
+                        username: rg_username,
+                        email: rg_email,
+                        password: rg_password
+                    },
+                    cache: false,
+                    success: function(json) {
+                        var error_message = json.error;
+                        var success = json.success;
+                        if (typeof error_message !== "undefined") {
+                            msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", error_message);
+                        } else if (typeof success !== "undefined" && success == "1") {
+                            msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Success! Please login");
+                            $("#login-modal").modal("hide");
+                        }
+                    }
+                });
                 return false;
                 break;
             default:

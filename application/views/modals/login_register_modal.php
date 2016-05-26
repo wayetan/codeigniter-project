@@ -3,7 +3,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 		<div class="modal-header" align="center">
-			<img class="img-circle" id="img_logo" src="assets/img/logo/busydaisy.img">
+			<img class="img-circle" id="img_logo" src="assets/img/daisy.png">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 			</button>
@@ -18,7 +18,7 @@
 						<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
 						<span id="text-login-msg">Type your username and password.</span>
 					</div>
-					<input id="login_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+					<input id="login_username" class="form-control" type="text" placeholder="Username" required>
 					<input id="login_password" class="form-control" type="password" placeholder="Password" required>
 					<div class="checkbox">
 						<label>
@@ -45,7 +45,7 @@
 						<div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
 						<span id="text-lost-msg">Type your e-mail.</span>
 					</div>
-					<input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+					<input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
 				</div>
 				<div class="modal-footer">
 					<div>
@@ -66,7 +66,7 @@
 						<div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
 						<span id="text-register-msg">Register an account.</span>
 					</div>
-					<input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+					<input id="register_username" class="form-control" type="text" placeholder="Username" required>
 					<input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
 					<input id="register_password" class="form-control" type="password" placeholder="Password" required>
 				</div>

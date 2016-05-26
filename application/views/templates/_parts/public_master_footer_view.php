@@ -29,8 +29,7 @@
 
     <!-- jQuery -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/custom/login-modal-animation.js"></script>
-    <script src="assets/js/custom/login-action.js"></script>
+    <script src="assets/js/custom/login-modal.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
 

@@ -5,7 +5,6 @@
     ?>
     <h1>Register</h1>
 
-
     <?php
     echo form_open();
     echo form_label('First name:', 'first_name').'<br />';
