@@ -25,7 +25,6 @@ body, h1, h2, h3, h4, h5, h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 .intro-message {
@@ -91,7 +90,7 @@ body, h1, h2, h3, h4, h5, h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(../../img/banner-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 .banner h2 {
@@ -133,4 +132,75 @@ footer {
 }
 p.copyright {
     margin: 15px 0 0;
+}
+.video-section .pattern-overlay {
+    background-color: rgba(71, 71, 71, 0.59);
+    padding: 110px 0 32px;
+    min-height: 496px;
+    /* Incase of overlay problems just increase the min-height*/
+}
+.video-section h1, .video-section h3 {
+    text-align: center;
+    color: #fff;
+}
+.video-section h1 {
+    font-size: 110px;
+    font-family: 'Pristina', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 40px auto 0px;
+    text-shadow: 1px 1px 1px #000;
+    -webkit-text-shadow: 1px 1px 1px #000;
+    -moz-text-shadow: 1px 1px 1px #000;
+}
+.video-section h3 {
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 0px auto 15px;
+}
+.video-section .buttonBar {
+    display: none;
+}
+.player {
+    font-size: 1px;
+}
+#togglePlay {
+    margin-top: 20px;
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    line-height: 70px;
+    border-radius: 100%;
+}
+#togglePlay.pause {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+#togglePlay.pause:hover {
+    background-color: #fff;
+    color: #333;
+}
+#togglePlay.play {
+    background-color: #fff;
+    color: #333;
+}
+#togglePlay.play:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+.goto {
+    position: absolute;
+    left: 0;
+    top: 360px;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}
+.goto .button {
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    padding: 10px;
+    text-transform: none;
 }

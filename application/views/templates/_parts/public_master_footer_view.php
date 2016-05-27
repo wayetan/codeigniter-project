@@ -29,9 +29,23 @@
 
     <!-- jQuery -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
     <script src="assets/js/custom/login-modal.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+          /**
+         *
+         * @param state
+         */
+        function changeLabel(state){
+            $("#togglePlay").html(state != 1 ? "pause" : "play");
+
+            $("#togglePlay").removeClass(state != 1 ? "play" : "pause");
+            $("#togglePlay").addClass(state != 1 ? "pause" : "play");
+        }
+
+    </script>
 
 </body>
 

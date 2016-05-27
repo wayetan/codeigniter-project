@@ -49,6 +49,20 @@ class User extends MY_Controller
         }
     }
 
+    public function resetPassword()
+    {
+        $email = $this->input->post('email');
+        $forgotten = $this->ion_auth->forgotten_password($email);
+
+        // if ($forgotten) { //if there were no errors
+        // $this->session->set_flashdata('message', $this->ion_auth->messages());
+        //     redirect('auth/login', 'refresh'); //we should display a confirmation page here instead of the login page
+        // } else {
+        //     $this->session->set_flashdata('message', $this->ion_auth->errors());
+        //     redirect('auth/forgot_password', 'refresh');
+        // }
+    }
+
     public function logout()
     {
         $this->ion_auth->logout();

@@ -1,4 +1,5 @@
 $(function() {
+    $(".player").mb_YTPlayer();
 
     var $formLogin = $('#login-form');
     var $formLost = $('#lost-form');
@@ -29,6 +30,7 @@ $(function() {
                         } else if (typeof success !== "undefined" && success == "1") {
                             msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
                             $("#login-modal").modal("hide");
+                            window.location.href = "/codeigniter";
                         }
                     }
                 });
@@ -36,11 +38,23 @@ $(function() {
                 break;
             case "lost-form":
                 var $ls_email = $('#lost_email').val();
-                if ($ls_email == "ERROR") {
-                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
-                } else {
-                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
-                }
+                $.ajax({
+                    url: "user/resetPassword",
+                    type: "post",
+                    data: {
+                        email: ls_email
+                    },
+                    cache: false,
+                    success: function(json) {
+                        var error_message = json.error;
+                        var success = json.success;
+                        if (typeof error_message !== "undefined") {
+                            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", error_message);
+                        } else if (typeof success !== "undefined" && success == "1") {
+                            msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
+                        }
+                    }
+                });
                 return false;
                 break;
             case "register-form":
@@ -63,7 +77,9 @@ $(function() {
                             msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", error_message);
                         } else if (typeof success !== "undefined" && success == "1") {
                             msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Success! Please login");
-                            $("#login-modal").modal("hide");
+                            setTimeout(function() {
+                                $('#login-modal').modal('hide');
+                            }, 10000);
                         }
                     }
                 });

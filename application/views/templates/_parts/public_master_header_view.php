@@ -14,12 +14,13 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="assets/css/landing-page.css" rel="stylesheet">
+    <link href="assets/css/custom/landing-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="assets/css/custom/login-modal.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/jquery.mb.YTPlayer.css" media="all" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -50,7 +51,7 @@
                       <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
                   </li>
                   <li>
-                      <a href="#services">Services</a>
+                      <a href="#services">Find Services</a>
                   </li>
                   <li>
                       <a href="#contact">Contact</a>
