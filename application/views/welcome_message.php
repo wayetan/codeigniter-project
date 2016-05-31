@@ -30,21 +30,23 @@
 <a  name="services"></a>
 <div class="content-section-a">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="assets/img/ipad.png" alt="">
-            </div>
-        </div>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+      <h2>Custom search field</h2>
+          <div id="custom-search-input">
+              <div class="input-group col-md-12">
+                  <input type="text" class="form-control input-lg" placeholder="Buscar" />
+                  <span class="input-group-btn">
+                      <button class="btn btn-info btn-lg" type="button">
+                          <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                  </span>
+              </div>
+          </div>
+      </div>
     </div>
-    <!-- /.container -->
+  </div>
 
 </div>
 <!-- /.content-section-a -->
